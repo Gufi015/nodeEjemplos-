@@ -34,3 +34,11 @@ fs.unlink('MI_ARCHIVO_3.txt', function (error) {
         console.log('file Deleted success!');
     }
 });
+
+fs.rename('MI_ARCHIVO_2.md', "RENOMBRADO_1.md", function(error){
+    if(error){
+        throw error
+    } else {
+        console.log('SUCCESS');
+    }
+});
