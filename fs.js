@@ -8,6 +8,4 @@ http.createServer(function(req,res){
         res.end();
     });
 }).listen(3000);
-
-
 console.log('Corriendo desde el puerto 3000');
