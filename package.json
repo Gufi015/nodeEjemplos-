@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "express": "*",
-        "formidable": "^1.2.1"
+        "formidable": "^1.2.1",
+        "nodemailer": "^4.6.8"
     }
 }
