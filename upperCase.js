@@ -1,0 +1,10 @@
+var uc = require('upper-case');
+var http = require('http');
+
+http.createServer(function(req, res){
+    res.writeHead(200,{'Content-Type': 'text/html'})
+    res.write(uc('Hola Mundo'));
+    res.end();
+}).listen(3000);
+
+console.log('Corriendo puerto 3000');
