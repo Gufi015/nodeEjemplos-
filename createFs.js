@@ -1,8 +1,9 @@
 var fs = require('fs');
 
 
-fs.appendFile('MI_NUEVOARCHIVO.md', 'ESTE ES EL CONTENIDO DEL ARCHIVO', function(error){
-    if(error){
+
+fs.appendFile('MI_NUEVOARCHIVO.md', 'ESTE ES EL CONTENIDO DEL ARCHIVO', function (error) {
+    if (error) {
         throw error;
     } else {
         console.log('File 1 Saved');
@@ -10,18 +11,26 @@ fs.appendFile('MI_NUEVOARCHIVO.md', 'ESTE ES EL CONTENIDO DEL ARCHIVO', function
 });
 
 
-fs.open('MI_ARCHIVO_2.md', 'w', function(error, File){
-    if(error){
+fs.open('MI_ARCHIVO_2.md', 'w', function (error, File) {
+    if (error) {
         throw error;
     } else {
         console.log('File 2 Saved');
     }
 });
 
-fs.writeFile('MI_ARCHIVO_3.txt', 'Contenido del archivo', function(error){
-    if(error){
+fs.writeFile('MI_ARCHIVO_3.txt', 'Contenido del archivo', function (error) {
+    if (error) {
         throw error;
-    } else{
+    } else {
         console.log('File 3 Saved');
+    }
+});
+
+fs.unlink('MI_ARCHIVO_3.txt', function (error) {
+    if (error) {
+        throw error;
+    } else {
+        console.log('file Deleted success!');
     }
 });
